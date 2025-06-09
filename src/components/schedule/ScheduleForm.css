@@ -73,3 +73,36 @@
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
+/* Додано адаптивність */
+@media (max-width: 480px) {
+  .modal {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .modal h3 {
+    font-size: 1.1rem;
+  }
+  
+  .modal input, 
+  .modal select {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    padding: 0.6rem;
+    width: 100%;
+  }
+  
+  .error-msg {
+    font-size: 0.8rem;
+  }
+}
