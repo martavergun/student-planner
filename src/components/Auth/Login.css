@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-/* Відступ між кнопкою Google і іншими елементами */
+
 .google-btn {
   padding: 10px;
   background-color: #db4437;
@@ -41,7 +41,7 @@
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  margin-bottom: 15px; /* Збільшений відступ */
+  margin-bottom: 15px; 
 }
 
 .error {
