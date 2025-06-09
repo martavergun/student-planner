@@ -49,3 +49,61 @@
   gap: 1rem;
   justify-content: flex-start;
 }
+/* Додано адаптивність */
+@media (max-width: 1024px) {
+  .notes-page {
+    padding: 1.5rem;
+  }
+  
+  .notes-page h2 {
+    font-size: 1.8rem;
+  }
+  
+  .notes-wall {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .notes-page {
+    padding: 1.2rem;
+  }
+  
+  .notes-page h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .add-note {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .add-note textarea {
+    min-height: 70px;
+  }
+  
+  .notes-wall {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .notes-page {
+    padding: 1rem;
+  }
+  
+  .notes-page h2 {
+    font-size: 1.4rem;
+  }
+  
+  .add-note textarea {
+    min-height: 60px;
+    padding: 0.5rem;
+  }
+  
+  .add-note button {
+    width: 100%;
+    text-align: center;
+  }
+}
