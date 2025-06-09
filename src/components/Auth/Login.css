@@ -30,7 +30,7 @@
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 15px; 
+  gap: 15px; 
 }
 
 .google-btn {
@@ -41,7 +41,7 @@
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 15px; 
+  gap: 15px; 
 }
 
 .error {
