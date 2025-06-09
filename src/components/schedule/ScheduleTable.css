@@ -128,37 +128,60 @@
   margin: 1rem 0;
   padding-bottom: 10px; /* Простір для скролбару */
 }
-
-/* Додайте ці стилі в кінець вашого CSS */
-.schedule-scroll-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Плавний скрол для iOS */
-  margin: 1rem 0;
-  padding: 5px; /* Відступи для скролу */
-  border-radius: 8px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-}
-
-.schedule-table-box {
-  min-width: fit-content; /* Ширина під контент */
-  display: inline-block; /* Для коректного гортання */
-}
-
-/* Для мобільних пристроїв */
 @media (max-width: 768px) {
+  .schedule-table-box {
+    min-width: auto;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  
   .schedule-table {
-    font-size: 14px;
+    margin-top: 0.5rem;
+    gap: 2px;
+    min-width: 600px; /* Фіксована ширина для горизонтального скролу */
   }
-  .cell {
-    min-width: 80px; /* Мінімальна ширина комірки */
-    height: 50px;
-  }
+  
   .time-cell {
     padding: 0.3rem;
+    font-size: 0.9rem;
+    min-width: 40px;
   }
-}
+  
+  .cell {
+    height: 50px;
+    min-width: 80px;
+  }
+  
+  .cell.filled {
+    min-height: 50px;
+  }
+  
+  .pair-subject {
+    font-size: 0.8rem;
+  }
+  
   .pair-type {
-    display: none; /* Приховуємо тип заняття на малих екранах */
+    font-size: 0.7rem;
+  }
+  
+  .schedule-scroll-container {
+    margin: 0.5rem 0;
+    padding-bottom: 5px;
+  }
+  
+  .copy-week-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Додаткові дрібні оптимізації */
+  .hex-btn {
+    font-size: 1.1rem;
+  }
+  
+  .delete-btn {
+    font-size: 12px;
+    padding: 0 3px;
   }
 }
