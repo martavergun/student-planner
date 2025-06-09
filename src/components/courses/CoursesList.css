@@ -121,3 +121,52 @@
 .buttons button:hover {
   background: #3d3d3d;
 }
+/* Додано адаптивність */
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-box {
+    padding: 1.5rem;
+  }
+  
+  .courses-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .course-form {
+    max-width: 100%;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-box {
+    padding: 1rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .course-card {
+    padding: 0.8rem;
+  }
+  
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+}
