@@ -73,36 +73,59 @@
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
-/* Додано адаптивність */
-@media (max-width: 480px) {
+/* Адаптивність */
+@media (max-width: 768px) {
   .modal {
-    width: calc(100% - 2rem);
-    margin: 0 1rem;
+    width: 90%;
+    max-width: 350px;
     padding: 1.2rem;
-    border-radius: 12px;
+    margin: 0 1rem;
   }
   
   .modal h3 {
     font-size: 1.1rem;
   }
   
-  .modal input, 
-  .modal select {
-    padding: 0.4rem;
-    font-size: 0.9rem;
+  .modal input, .modal select {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-bg {
+    padding: 1rem;
+  }
+  
+  .modal {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .modal h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .modal input, .modal select {
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
   }
   
   .buttons {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
   
   .btn {
-    padding: 0.6rem;
-    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
   }
   
   .error-msg {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
