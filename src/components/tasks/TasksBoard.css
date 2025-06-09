@@ -116,10 +116,50 @@
   color: #7a5c4d;
   font-weight: 500;
 }
-/* Додано адаптивність */
-@media (max-width: 768px) {
+/* Адаптивність */
+@media (max-width: 1024px) {
   .task-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  
+  .task-form input[type="text"],
+  .task-form input[type="date"],
+  .task-form input[type="time"] {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .task-form button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+  
+  .filter-buttons {
+    justify-content: center;
+  }
+  
+  .task-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .task-card {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-grid {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
@@ -131,40 +171,40 @@
     font-size: 1.1rem;
   }
   
+  .task-card h4 {
+    font-size: 1rem;
+  }
+  
   .task-card p {
     font-size: 0.85rem;
   }
   
   .mark-btn {
-    padding: 0.4rem 0.7rem;
-    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
   }
   
-  .task-form {
+  .filter-buttons {
     flex-direction: column;
-    align-items: stretch;
+    gap: 0.4rem;
+  }
+  
+  .filter-buttons button {
+    width: 100%;
+    padding: 0.6rem 1rem;
   }
   
   .task-form input[type="text"],
   .task-form input[type="date"],
   .task-form input[type="time"] {
-    width: 100%;
-    min-width: unset;
-  }
-}
-
-@media (max-width: 480px) {
-  .task-grid {
-    grid-template-columns: 1fr;
+    padding: 0.7rem;
+    font-size: 1rem;
   }
   
-  .filter-buttons {
-    gap: 0.3rem;
-  }
-  
-  .filter-buttons button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+  .task-form button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
   }
   
   .task-timer {
