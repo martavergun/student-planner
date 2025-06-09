@@ -8,21 +8,8 @@ import "./UserMenu.css";
 const UserMenu = () => {
   const { currentUser } = useAuth();
   const [open, setOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
   const menuRef = useRef(null);
-
-  // Check if screen is mobile
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
