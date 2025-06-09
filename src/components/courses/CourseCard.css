@@ -84,3 +84,25 @@ input[type="checkbox"]::after {
 input[type="checkbox"]:checked::after {
   opacity: 1;
 }
+/* Доданий код для адаптивності */
+@media (max-width: 768px) {
+  .course-card {
+    width: calc(50% - 2rem);
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-card {
+    width: calc(100% - 2rem);
+  }
+  
+  .card-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .card-buttons button {
+    width: 100%;
+  }
+}
