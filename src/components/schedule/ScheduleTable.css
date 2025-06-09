@@ -129,35 +129,35 @@
   padding-bottom: 10px; /* Простір для скролбару */
 }
 
-
-@media (max-width: 1200px) {
-  .schedule-table-box {
-    min-width: 100%;
-  }
-  .schedule-table {
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки замість 6 */
-  }
+/* Додайте ці стилі в кінець вашого CSS */
+.schedule-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Плавний скрол для iOS */
+  margin: 1rem 0;
+  padding: 5px; /* Відступи для скролу */
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
 }
 
+.schedule-table-box {
+  min-width: fit-content; /* Ширина під контент */
+  display: inline-block; /* Для коректного гортання */
+}
+
+/* Для мобільних пристроїв */
 @media (max-width: 768px) {
-  .schedule-scroll-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 1rem 0;
-  }
-  .schedule-table-box {
-    min-width: 600px; /* Фіксована ширина для гортання */
+  .schedule-table {
+    font-size: 14px;
   }
   .cell {
-    min-width: 120px; /* Мінімальна ширина комірки */
+    min-width: 80px; /* Мінімальна ширина комірки */
+    height: 50px;
+  }
+  .time-cell {
+    padding: 0.3rem;
   }
 }
-
-@media (max-width: 480px) {
-  .schedule-table-box {
-    min-width: 500px;
-  }
   .pair-type {
     display: none; /* Приховуємо тип заняття на малих екранах */
   }
