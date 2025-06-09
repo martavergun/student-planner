@@ -89,6 +89,7 @@ const ScheduleTable = () => {
   };
 
   return (
+    <div class="schedule-scroll-container">
     <div className="schedule-table-box">
       <h2>Мій розклад</h2>
 
@@ -131,6 +132,7 @@ const ScheduleTable = () => {
             })}
           </div>
         ))}
+      </div>
       </div>
 
       {selectedSlot && (
