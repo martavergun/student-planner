@@ -55,3 +55,36 @@
   background: var(--hover);
   border-radius: 6px;
 }
+/* Додано адаптивність */
+@media (max-width: 768px) {
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .avatar-initial {
+    font-size: 0.9rem;
+  }
+  
+  .menu-dropdown {
+    top: 42px;
+    padding: 0.4rem;
+  }
+  
+  .menu-dropdown button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .menu-dropdown {
+    width: 160px;
+    right: -10px;
+  }
+}
