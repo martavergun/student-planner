@@ -36,8 +36,19 @@
   color: white;
 }
 
-/* Видалив конфліктні стилі .user-icon - тепер UserMenu буде працювати */
+.user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.user-icon img,
+.icon-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--hover);
+}
 .logout-btn {
   background: var(--hover);
   color: var(--text);
@@ -52,64 +63,40 @@
   background: var(--accent-light);
 }
 
-/* Адаптивність */
+/* Додано адаптивність */
 @media (max-width: 768px) {
   .header {
     padding: 0.5rem 1rem;
+    flex-wrap: wrap;
   }
   
   .nav {
-    display: none;
+    order: 2;
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
   }
   
-  .hamburger {
-    display: flex;
+  .nav a {
+    margin-right: 0;
+    font-size: 0.9rem;
   }
   
   .header-right {
-    gap: 0.5rem;
-  }
-  
-  .theme-toggle {
-    font-size: 1.1rem;
+    gap: 0.7rem;
   }
   
   .logout-btn {
     padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
   }
   
-  .logo {
-    font-size: 1.1rem;
-  }
-  
-  .header-right {
-    gap: 0.3rem;
-  }
-  
-  .theme-toggle {
+  .theme-toggle,
+  .user-icon img,
+  .icon-placeholder {
     font-size: 1rem;
-    padding: 0.3rem;
-  }
-  
-  .logout-btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.85rem;
-  }
-  
-  .hamburger span {
-    width: 20px;
-    height: 2px;
-  }
-  
-  .mobile-nav a {
-    padding: 0.8rem 1rem;
-    font-size: 0.95rem;
+    width: 28px;
+    height: 28px;
   }
 }
