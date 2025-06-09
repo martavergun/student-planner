@@ -50,3 +50,60 @@
 
 .delete-btn {
   background: crimson;
+}
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2f231b;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2f231b;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #f2eee9;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+/* Доданий код для адаптивності */
+@media (max-width: 768px) {
+  .course-card {
+    width: calc(50% - 2rem);
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-card {
+    width: calc(100% - 2rem);
+  }
+  
+  .card-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .card-buttons button {
+    width: 100%;
+  }
+}
