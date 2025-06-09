@@ -30,8 +30,8 @@
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 15px; /* Відступ між кнопками */
 }
-
 
 .google-btn {
   padding: 10px;
@@ -41,13 +41,14 @@
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  margin-bottom: 15px; 
+  margin-bottom: 15px; /* Відступ між кнопками */
 }
 
 .error {
   color: red;
   margin-bottom: 10px;
 }
+
 /* Доданий код для адаптивності */
 @media (max-width: 480px) {
   .login-container {
