@@ -61,17 +61,12 @@
 .cell[class*="practice"] { background-color: #d2f4ff; }
 .cell[class*="lab"] { background-color: #ffd2f0; }
 
-.delete-btn {Add commentMore actions
+.delete-btn {
   position: absolute;
-  top: 4px;
-  right: 6px;
-  background: transparent;
   top: 2px;
   right: 4px;
   background: #fdd;
   border: none;
-  color: #333;
-  font-size: 16px;
   color: #900;
   font-size: 14px;
   font-weight: bold;
@@ -82,9 +77,9 @@
 }
 
 .delete-btn:hover {
-  color: red;
+  background: #f00;
+  color: #fff;
 }
-
 
 .pair-content {
   position: relative;
