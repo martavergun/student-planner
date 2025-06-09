@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase/config";
@@ -8,32 +8,85 @@ import "./UserMenu.css";
 const UserMenu = () => {
   const { currentUser } = useAuth();
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
+  const menuRef = useRef(null);
+
+  // Check if screen is mobile
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open]);
 
   const handleLogout = async () => {
-    await signOut(auth);
-    navigate("/login");
+    try {
+      await signOut(auth);
+      navigate("/login");
+      setOpen(false);
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
   };
 
   const toggleMenu = () => {
     setOpen(!open);
   };
 
+  const handleProfileClick = () => {
+    navigate("/profile");
+    setOpen(false);
+  };
+
   return (
-    <div className="user-menu">
+    <div className="user-menu" ref={menuRef}>
+      {/* Desktop Avatar */}
       <div className="avatar" onClick={toggleMenu}>
         {currentUser?.photoURL ? (
           <img src={currentUser.photoURL} alt="user" className="avatar-img" />
         ) : (
           <div className="avatar-initial">
-            {currentUser?.email[0].toUpperCase()}
+            {currentUser?.email?.[0]?.toUpperCase() || 'U'}
           </div>
         )}
       </div>
 
+      {/* Mobile Hamburger Menu */}
+      <div 
+        className={`hamburger-menu ${open ? 'open' : ''}`} 
+        onClick={toggleMenu}
+      >
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+      </div>
+
+      {/* Dropdown Menu */}
       {open && (
         <div className="menu-dropdown">
-          <button onClick={() => navigate("/profile")}>Профіль</button>
+          <button onClick={handleProfileClick}>Профіль</button>
           <button onClick={handleLogout}>Вийти</button>
         </div>
       )}
