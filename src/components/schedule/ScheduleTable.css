@@ -120,3 +120,57 @@
   font-size: 1rem;
   cursor: pointer;
 }
+/* Додано адаптивність */
+@media (max-width: 1200px) {
+  .schedule-table-box {
+    min-width: 450px;
+  }
+  .schedule-table {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .schedule-table-box {
+    min-width: 400px;
+  }
+  .schedule-table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .time-cell {
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-table-box {
+    min-width: 100%;
+    overflow-x: auto;
+    padding: 0.8rem;
+  }
+  .schedule-table {
+    grid-template-columns: repeat(6, 150px); /* Фіксована ширина для гортання */
+    gap: 2px;
+  }
+  .cell {
+    height: 50px;
+  }
+  .pair-subject {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .schedule-table {
+    grid-template-columns: repeat(6, 120px);
+  }
+  .cell {
+    height: 45px;
+  }
+  .pair-subject {
+    font-size: 0.85rem;
+  }
+  .pair-type {
+    display: none;
+  }
+}
