@@ -18,23 +18,3 @@
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.5rem;
 }
-/* Додано адаптивність */
-@media (max-width: 768px) {
-  .weekly-tasks-box {
-    min-width: 250px;
-    padding: 0.8rem;
-  }
-  
-  .weekly-tasks-box li {
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .weekly-tasks-box {
-    min-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-}
