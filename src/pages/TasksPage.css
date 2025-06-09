@@ -3,3 +3,21 @@
   display: flex;
   justify-content: center;
 }
+/* Додано адаптивність */
+@media (max-width: 1024px) {
+  .tasks-page {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tasks-page {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tasks-page {
+    padding: 1rem;
+  }
+}
