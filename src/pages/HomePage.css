@@ -13,3 +13,44 @@
   align-items: flex-start;
   gap: 40px;
 }
+/* Додано адаптивність */
+@media (max-width: 1024px) {
+  .home-page {
+    padding: 30px 40px;
+  }
+  
+  .home-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 25px 30px;
+  }
+  
+  .home-page h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .home-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 20px;
+  }
+  
+  .home-page h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  
+  .home-content {
+    gap: 15px;
+  }
+}
