@@ -127,3 +127,84 @@
   margin: 1rem 0;
   padding-bottom: 10px; /* Простір для скролбару */
 }
+/* Додаткові адаптивні стилі */
+@media (max-width: 1200px) {
+  .schedule-table {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .header-row .time-cell:nth-child(6),
+  .row .cell:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .schedule-table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .header-row .time-cell:nth-child(5),
+  .row .cell:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-table-box {
+    min-width: auto;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  
+  .schedule-table {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .header-row .time-cell:nth-child(4),
+  .row .cell:nth-child(4) {
+    display: none;
+  }
+  
+  .pair-subject {
+    font-size: 0.85rem;
+  }
+  
+  .pair-type {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .schedule-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-row .time-cell:nth-child(3),
+  .row .cell:nth-child(3) {
+    display: none;
+  }
+  
+  .cell {
+    height: 50px;
+    min-height: 50px;
+  }
+  
+  .hex-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .schedule-table {
+    grid-template-columns: 1fr;
+  }
+  .header-row .time-cell:nth-child(2),
+  .row .cell:nth-child(2) {
+    display: none;
+  }
+  
+  .pair-subject {
+    font-size: 0.8rem;
+  }
+  
+  .pair-type {
+    display: none;
+  }
+}
