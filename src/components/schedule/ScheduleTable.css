@@ -57,10 +57,6 @@
   height: 100%;
 }
 
-.cell[class*="lecture"] { background-color: #fff4d2; }
-.cell[class*="practice"] { background-color: #d2f4ff; }
-.cell[class*="lab"] { background-color: #ffd2f0; }
-
 .delete-btn {
   position: absolute;
   top: 2px;
@@ -129,14 +125,6 @@
   padding-bottom: 10px; /* Простір для скролбару */
 }
 
-@media (max-width: 600px) {
-  table {
-    font-size: 14px;
-  }
-  th, td {
-    padding: 6px;
-  }
-}
 @media (max-width: 768px) {
   .schedule-table-box {
     min-width: auto;
@@ -159,6 +147,7 @@
   .cell {
     height: 50px;
     min-width: 80px;
+    background: #fff4d2; /* Бежевий фон для всіх клітинок */
   }
   
   .cell.filled {
@@ -193,4 +182,9 @@
     font-size: 12px;
     padding: 0 3px;
   }
+
+  /* Специфічні кольори для типів занять поверх бежевого фону */
+  .cell[class*="lecture"] { background-color: #fff4d2; }
+  .cell[class*="practice"] { background-color: #d2f4ff; }
+  .cell[class*="lab"] { background-color: #ffd2f0; }
 }
