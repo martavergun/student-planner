@@ -48,3 +48,17 @@
   color: red;
   margin-bottom: 10px;
 }
+/* Доданий код для адаптивності */
+@media (max-width: 480px) {
+  .login-container {
+    margin: 30px 20px;
+    padding: 20px;
+  }
+  
+  .login-form input,
+  .login-form button,
+  .google-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
