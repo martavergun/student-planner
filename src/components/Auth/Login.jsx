@@ -41,7 +41,7 @@ const Login = () => {
         <button type="submit">Увійти</button>
         <button type="button" onClick={handleGoogle}>Увійти через Google</button>
         <p>
-          Немає акаунту? <strong onClick={() => navigate("/register")}>Зареєструйся</strong>
+          Немає акаунту? <strong onClick={() => navigate("/register")}>Зареєструйтесь</strong>
         </p>
       </form>
     </div>
