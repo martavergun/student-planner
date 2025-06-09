@@ -20,3 +20,27 @@
 [data-theme="dark"] .main-content {
   background-color: var(--surface-dark);
 }
+/* Додано адаптивність */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 18px;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+  }
+}
