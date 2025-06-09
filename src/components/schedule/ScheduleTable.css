@@ -63,23 +63,24 @@
 
 .delete-btn {
   position: absolute;
-  top: 2px;
+  top: 4px;
   right: 4px;
-  background: #fdd;
+  background: transparent;
   border: none;
-  color: #900;
-  font-size: 14px;
+  color: #ff4d4d; 
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 0 6px;
+  border-radius: 50%;
 }
 
 .delete-btn:hover {
-  background: #f00;
-  color: #fff;
+  background-color: rgba(255, 77, 77, 0.2); 
+  color: #d11a1a; 
 }
+
 
 .pair-content {
   position: relative;
