@@ -40,79 +40,76 @@
   font-size: 1.3rem;
   color: var(--accent);
 }
+
 .cell.filled {
-  color: #000;
+  color: var(--text);
   font-weight: bold;
   position: relative;
   text-align: center;
-  padding: 0.4rem;
+  padding: 0.2rem 0.3rem;
   border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+  min-height: 60px;
+  height: 100%;
 }
 
 .cell[class*="lecture"] { background-color: #fff4d2; }
 .cell[class*="practice"] { background-color: #d2f4ff; }
 .cell[class*="lab"] { background-color: #ffd2f0; }
+
 .delete-btn {
   position: absolute;
-  top: 4px;
-  right: 6px;
-  background: transparent;
+  top: 2px;
+  right: 4px;
+  background: #fdd;
   border: none;
-  color: #333;
-  font-size: 16px;
+  color: #900;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
+  padding: 0 4px;
+  border-radius: 4px;
 }
 
 .delete-btn:hover {
-  color: red;
+  background: #f00;
+  color: #fff;
 }
-.cell.filled {
-  color: var(--text); /* автоматично буде світлий у темній темі */
-  font-weight: bold;
-  position: relative;
-  text-align: center;
-  padding: 0.5rem 0.3rem;
-  border-radius: 4px;
-}
+
 .pair-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
   padding: 0.3rem;
-  text-align: center;
   font-weight: bold;
   color: var(--text);
+  text-align: center;
 }
 
 .pair-subject {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 0.2rem;
+  line-height: 1.2;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .pair-type {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: normal;
-}
-
-.delete-btn {
-  position: absolute;
-  top: 4px;
-  right: 6px;
-  background: transparent;
-  border: none;
-  color: inherit;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
   line-height: 1;
 }
 
-.delete-btn:hover {
-  color: red;
-}
 .copy-week-btn {
   background: var(--accent);
   color: white;
