@@ -129,45 +129,36 @@
   padding-bottom: 10px; /* Простір для скролбару */
 }
 
-/* Адаптивність для таблиці */
-@media (max-width: 768px) {
+
+@media (max-width: 1200px) {
   .schedule-table-box {
     min-width: 100%;
-    padding: 0.8rem;
   }
-  
   .schedule-table {
-    min-width: 600px; /* Мінімальна ширина для гортання */
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки замість 6 */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .schedule-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+  }
+  .schedule-table-box {
+    min-width: 600px; /* Фіксована ширина для гортання */
+  }
   .cell {
-    height: 50px;
-  }
-  
-  .pair-subject {
-    font-size: 0.9rem;
-  }
-  
-  .pair-type {
-    display: none; /* Приховуємо на малих екранах */
+    min-width: 120px; /* Мінімальна ширина комірки */
   }
 }
 
 @media (max-width: 480px) {
-  .schedule-table {
+  .schedule-table-box {
     min-width: 500px;
   }
-  
-  .cell {
-    height: 45px;
-  }
-  
-  .pair-subject {
-    font-size: 0.85rem;
-  }
-  
-  .delete-btn {
-    font-size: 14px;
+  .pair-type {
+    display: none; /* Приховуємо тип заняття на малих екранах */
   }
 }
-
