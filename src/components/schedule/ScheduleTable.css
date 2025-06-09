@@ -128,6 +128,15 @@
   margin: 1rem 0;
   padding-bottom: 10px; /* Простір для скролбару */
 }
+
+@media (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+  th, td {
+    padding: 6px;
+  }
+}
 @media (max-width: 768px) {
   .schedule-table-box {
     min-width: auto;
