@@ -84,74 +84,25 @@ input[type="checkbox"]::after {
 input[type="checkbox"]:checked::after {
   opacity: 1;
 }
-/* Адаптивність */
-@media (max-width: 1024px) {
-  .course-card {
-    width: 220px;
-    margin: 0.8rem;
-  }
-}
-
+/* Доданий код для адаптивності */
 @media (max-width: 768px) {
   .course-card {
-    width: 100%;
-    max-width: 300px;
-    margin: 0.5rem auto;
-  }
-  
-  .course-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 16px;
-  }
-  
-  .course-name,
-  .course-teacher {
-    margin: 0;
-    flex: none;
-    width: 100%;
-  }
-  
-  .course-actions {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .course-actions button {
-    margin-left: 15px;
-    font-size: 20px;
+    width: calc(50% - 2rem);
+    min-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .course-card {
-    width: 100%;
-    margin: 0.5rem 0;
-    padding: 0.8rem;
-  }
-  
-  .course-card h3 {
-    font-size: 1.1rem;
+    width: calc(100% - 2rem);
   }
   
   .card-buttons {
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.5rem;
   }
   
   .card-buttons button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-  
-  .progress-percent {
-    font-size: 0.8rem;
-  }
-  
-  input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    width: 100%;
   }
 }
