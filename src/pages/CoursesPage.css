@@ -3,15 +3,4 @@
   display: flex;
   justify-content: center;
 }
-/* Додано адаптивність */
-@media (max-width: 768px) {
-  .courses-page {
-    padding: 1.5rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .courses-page {
-    padding: 1rem;
-  }
-}
