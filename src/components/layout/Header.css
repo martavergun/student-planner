@@ -36,19 +36,8 @@
   color: white;
 }
 
-.user-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* Видалив конфліктні стилі .user-icon - тепер UserMenu буде працювати */
 
-.user-icon img,
-.icon-placeholder {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: var(--hover);
-}
 .logout-btn {
   background: var(--hover);
   color: var(--text);
@@ -62,6 +51,7 @@
 .logout-btn:hover {
   background: var(--accent-light);
 }
+
 /* Адаптивність */
 @media (max-width: 768px) {
   .header {
@@ -82,12 +72,6 @@
   
   .theme-toggle {
     font-size: 1.1rem;
-  }
-  
-  .user-icon img,
-  .icon-placeholder {
-    width: 28px;
-    height: 28px;
   }
   
   .logout-btn {
@@ -112,12 +96,6 @@
   .theme-toggle {
     font-size: 1rem;
     padding: 0.3rem;
-  }
-  
-  .user-icon img,
-  .icon-placeholder {
-    width: 26px;
-    height: 26px;
   }
   
   .logout-btn {
