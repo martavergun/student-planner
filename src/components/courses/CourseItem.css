@@ -27,34 +27,3 @@
   cursor: pointer;
   font-size: 18px;
 }
-/* Додано адаптивність */
-@media (max-width: 768px) {
-  .course-item {
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 10px 12px;
-  }
-  
-  .course-name {
-    flex: 1 1 100%;
-    order: 1;
-  }
-  
-  .course-teacher {
-    flex: 1 1 calc(100% - 100px);
-    margin-left: 0;
-    order: 2;
-    font-size: 0.9em;
-  }
-  
-  .course-actions {
-    flex: 1 1 100px;
-    order: 3;
-    text-align: right;
-  }
-  
-  .course-actions button {
-    margin-left: 8px;
-    font-size: 16px;
-  }
-}
