@@ -41,3 +41,31 @@
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
+/* Додано адаптивність */
+@media (max-width: 768px) {
+  .note-card {
+    width: calc(50% - 2rem);
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .note-card {
+    width: calc(100% - 2rem);
+    min-height: 120px;
+    margin: 0.8rem;
+    padding: 0.8rem;
+  }
+  
+  .note-card p {
+    font-size: 0.95rem;
+  }
+  
+  .note-time {
+    font-size: 0.75rem;
+  }
+  
+  .delete-note {
+    font-size: 1.1rem;
+  }
+}
