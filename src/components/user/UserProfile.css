@@ -58,3 +58,37 @@
   font-weight: bold;
   cursor: pointer;
 }
+/* Додано адаптивність */
+@media (max-width: 480px) {
+  .user-profile {
+    padding: 1.2rem;
+    max-width: calc(100% - 2rem);
+    border-radius: 10px;
+  }
+  
+  .avatar-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .avatar-img,
+  .avatar-placeholder {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .avatar-placeholder {
+    font-size: 1.3rem;
+  }
+  
+  .profile-fields input {
+    padding: 0.4rem;
+    font-size: 0.95rem;
+  }
+  
+  .user-profile button {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+}
