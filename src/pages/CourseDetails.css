@@ -16,3 +16,27 @@
   margin-bottom: 0.7rem;
   font-size: 1.05rem;
 }
+/* Додано адаптивність */
+@media (max-width: 768px) {
+  .course-details {
+    padding: 1.2rem;
+    max-width: calc(100% - 2rem);
+  }
+  
+  .labs-list li {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-details {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .labs-list li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+}
