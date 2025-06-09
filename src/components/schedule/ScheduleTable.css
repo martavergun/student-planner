@@ -61,24 +61,28 @@
 .cell[class*="practice"] { background-color: #d2f4ff; }
 .cell[class*="lab"] { background-color: #ffd2f0; }
 
-.delete-btn {
+.delete-btn {Add commentMore actions
   position: absolute;
   top: 4px;
-  right: 4px;
+  right: 6px;
   background: transparent;
+  top: 2px;
+  right: 4px;
+  background: #fdd;
   border: none;
-  color: #ff4d4d; 
-  font-size: 18px;
+  color: #333;
+  font-size: 16px;
+  color: #900;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
-  padding: 0 6px;
-  border-radius: 50%;
+  padding: 0 4px;
+  border-radius: 4px;
 }
 
 .delete-btn:hover {
-  background-color: rgba(255, 77, 77, 0.2); 
-  color: #d11a1a; 
+  color: red;
 }
 
 
