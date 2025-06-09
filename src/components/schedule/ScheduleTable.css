@@ -40,75 +40,79 @@
   font-size: 1.3rem;
   color: var(--accent);
 }
-
 .cell.filled {
-  color: var(--text);
+  color: #000;
   font-weight: bold;
   position: relative;
   text-align: center;
-  padding: 0.2rem 0.3rem;
+  padding: 0.4rem;
   border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  word-break: break-word;
-  min-height: 60px;
-  height: 100%;
 }
- .cell[class*="lecture"] { background-color: #fff4d2; }
-  .cell[class*="practice"] { background-color: #d2f4ff; }
-  .cell[class*="lab"] { background-color: #ffd2f0; }
 
+.cell[class*="lecture"] { background-color: #fff4d2; }
+.cell[class*="practice"] { background-color: #d2f4ff; }
+.cell[class*="lab"] { background-color: #ffd2f0; }
 .delete-btn {
   position: absolute;
-  top: 2px;
-  right: 4px;
-  background: #fdd;
+  top: 4px;
+  right: 6px;
+  background: transparent;
   border: none;
-  color: #900;
-  font-size: 14px;
+  color: #333;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
-  padding: 0 4px;
-  border-radius: 4px;
 }
 
 .delete-btn:hover {
-  background: #f00;
-  color: #fff;
+  color: red;
 }
-
-.pair-content {
+.cell.filled {
+  color: var(--text); /* автоматично буде світлий у темній темі */
+  font-weight: bold;
   position: relative;
-  width: 100%;
-  height: 100%;
+  text-align: center;
+  padding: 0.5rem 0.3rem;
+  border-radius: 4px;
+}
+.pair-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  height: 100%;
   padding: 0.3rem;
+  text-align: center;
   font-weight: bold;
   color: var(--text);
-  text-align: center;
 }
 
 .pair-subject {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 0.2rem;
-  line-height: 1.2;
-  max-width: 100%;
-  word-break: break-word;
-  overflow-wrap: anywhere;
 }
 
 .pair-type {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: normal;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
   line-height: 1;
 }
 
+.delete-btn:hover {
+  color: red;
+}
 .copy-week-btn {
   background: var(--accent);
   color: white;
@@ -118,12 +122,4 @@
   margin-bottom: 1rem;
   font-size: 1rem;
   cursor: pointer;
-}
-/* Контейнер для гортання таблиці */
-.schedule-scroll-container {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Плавне гортання для iOS */
-  margin: 1rem 0;
-  padding-bottom: 10px; /* Простір для скролбару */
 }
