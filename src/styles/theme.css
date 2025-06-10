@@ -10,7 +10,7 @@
 
 [data-theme="dark"] {
   --bg: #1e1e1e;
-  --text: #f3f3f3;
+  --text: #000;
   --box: #2a2a2a;
   --accent: #bca58e;
   --accent-light: #d4c3b0;
